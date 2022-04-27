@@ -1,0 +1,432 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap');
+
+:root{  /*declaring global css variable */
+    --orange:	#EEFE0D;
+}
+
+*{  /*global properties for the whole website*/
+    font-family: 'Nunito', sans-serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+*::selection{ /*it ll apply the following properties once highlighted by the user in whole webpage*/
+    background:var(--orange);
+    color:#333;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+html::-webkit-scrollbar{   /*scroll bar styling*/
+    width:1.4rem;
+}
+
+html::-webkit-scrollbar-track{
+    background:#222;
+}
+
+html::-webkit-scrollbar-thumb{
+    background:var(--orange);
+}
+
+body{                   /*body styling*/
+    background:#111;
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+
+section{
+    min-height: 100vh;
+    padding:1rem;
+}
+
+.btn{       /*about me btn styling*/             
+    padding:.7rem 3rem;
+    background:#333;
+    color:#fff;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem; /*add rounded corners*/
+}
+
+.btn i{   /*btn icon styling for about me*/
+    padding:0 .5rem;
+    font-size: 1.8rem;
+}
+
+.btn:hover{          /*changing button clr to orange on hover */
+    background:var(--orange);
+}
+
+.heading{  /*heading class of all pages styling*/
+    text-align: center;
+    margin:0 6rem;
+    font-size: 4rem;
+    padding:1rem;
+    border-bottom: .1rem solid #fff4;
+    color:#fff;
+}
+
+.heading span{  /**heading span  color*/
+    color:var(--orange);
+}
+
+header{          /*header styling*/
+    position: fixed;
+    top:0; left:0;
+    z-index: 1000;
+    height:100%;
+    width:35rem;
+    background:#1a1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+}
+
+header .user img{ /*img styling*/
+    height:17rem;
+    width:17rem;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1rem;
+    border:.7rem solid var(--orange);
+}
+
+header .user .name{ /*name styling*/
+    font-size: 3.5rem;
+    color:#fff;
+}
+
+header .user .post{ /*Machine learning Enthusiast styling*/
+    font-size: 2rem;
+    color:#eee;
+}
+
+header .navbar{ /* navbar size*/
+    width:100%;
+}
+
+header .navbar ul{ /* navbar list styling */
+    list-style: none;
+    padding:1rem 3rem;
+}
+
+
+header .navbar ul li a{ /*navbar links styling */
+    display: block;
+    padding:1rem;
+    margin:1.5rem 0;
+    background:#333;
+    color:#fff;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+
+header .navbar ul li a:hover{ /* hover effect on navbar*/
+    background:var(--orange);
+}
+
+#menu{
+    position: fixed;
+    top:2rem; right:2rem;
+    background:#333;
+    color:#fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding:1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+
+.home{            /* home section styling*/
+    display: flex;
+    justify-content: center; /*centre align in every flex*/
+    flex-flow: column;
+    padding:0 15rem;
+}
+
+.home h3{  /*HI THERE styling*/
+    font-size: 2.5rem;
+    color:#fff;
+}
+
+.home h1{  /* HI THERE styling*/
+    font-size:5rem;
+    color:#fff;
+}
+
+.home h1 span{  /*ASHISH KUMAR span styling*/
+    color:var(--orange);
+}
+
+.home p{  /*paragraph styling inside home section*/
+    font-size:2rem;
+    color:#eee;
+    padding: 1rem 0;
+}
+.home p span{
+    color:var(--orange);
+}
+
+.about .row{ /* About div styling*/
+    display: flex; /*flexible box container - everthing inside this ll be automatically flexible*/
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:1rem 0;
+}
+
+.about .row .info{ /*about div my info styling*/
+    flex:1 1 48rem;
+    padding:2rem 1rem;
+    padding-left: 6rem;
+}
+
+.about .row .info h3{ /*about page h3 styling*/
+    font-size: 2rem;
+    color:var(--orange);
+    padding:1rem 0;
+    font-weight: normal;
+}
+
+.about .row .info h3 span{
+    color:#eee;
+    padding:0 .5rem;
+}
+
+.about .row .counter{ /* counter div in about styling */
+    flex:1 1 48rem;
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; /*Make the flexible items wrap if necessary:*/
+}
+
+.about .row .counter .box{ /*box styling*/
+    width:20rem;
+    background:#222;
+    text-align: center;
+    padding: 2rem;
+    margin:2rem;
+}
+
+.about .row .counter .box span{ /*box span text styling*/
+    font-size: 4rem;
+    color:var(--orange);
+}
+
+.about .row .counter .box h3{ /*box h3 text*/
+    font-size: 2rem;
+    color:#fff;
+}
+
+.education .box-container{ /*box container div*/
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /*provides even spacing between objcts*/
+    flex-wrap: wrap;
+    padding:1rem 0;
+    padding-left: 3rem;
+}
+
+.education .box-container .box{ /*box inside box container styling*/
+    width:27rem;
+    margin:4rem 1rem;
+    padding-left: 4rem;
+    border-left: .2rem solid #fff;
+    position: relative;
+}
+
+.education .box-container .box span{ /*span text inside box div*/
+    font-size: 1.3rem;
+    background:#222;
+    color:#fff;
+    border-radius: 5rem;
+    padding:.5rem 2.5rem;
+}
+
+.education .box-container .box h3{ /*h3 inside box div*/
+    font-size: 2rem;
+    color:#fff;
+    padding-top: 1.5rem;
+}
+
+.education .box-container .box p{ /*p inside box div*/
+    font-size: 1.4rem;
+    color:#eee;
+    padding: 1rem 0;
+}
+
+.education .box-container .box i{ /*icon styling*/
+    position: absolute;
+    top:-1.5rem; left:-2.5rem;
+    height:5rem;
+    width: 5rem;
+    border-radius: 50%;
+    line-height: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    color:#fff;
+    background:var(--orange);
+}
+
+.portfolio .box-container{
+    display: flex;
+    
+    justify-content: center;
+    flex-wrap: wrap;
+    padding:2rem 0;
+}
+.portfolio .box-container .box h3{ /*h3 inside box div*/
+    font-size: 2rem;
+    color:#fff;
+    padding-top: 1.5rem;
+}
+
+.portfolio .box-container .box{ /*box styling inside portfolio section*/
+    height: 50rem;
+    width:46rem;
+    border-radius: 1rem;
+    margin:2rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.portfolio .box-container .box img{ /*img inside box styling*/
+    height:100%;
+    width:100%;
+    object-fit: cover;
+}
+
+.portfolio .box-container .box:hover img{
+    transform: scale(1.8); /*image increase in size as hovered*/
+}
+
+.contact .row{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact .row .content{
+    flex:1 1 30rem;
+    padding:4rem;
+    padding-bottom: 0;
+}
+
+
+
+.contact .row .content .title{
+    text-transform: uppercase;
+    color:#fff;
+    font-size: 3rem;
+    padding-bottom: 2rem;
+}
+
+.contact .row .content .info h3{
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    color:#eee;
+    padding:1rem 0;
+    font-weight: normal;
+}
+
+.contact .row .content .info h3 i{
+    padding-right: 1rem;
+    color:var(--orange);
+}
+.contact .row .content .info a{
+    color:#eee
+}
+
+.top{
+    position: fixed;
+    bottom:7.5rem; right: 2rem;
+    z-index: 100;
+    display: none;
+}
+.top img{
+    height: 25px;
+    width: 29px;
+}
+/* media queries- dynamic properties of my website */
+/*Media queries is a feature of CSS 3 allowing content rendering to adapt to different conditions such as screen resolution*/
+
+@media (max-width:1200px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .home{            /*padding to home section of our portfolio*/
+        padding:1rem 4rem;
+    }
+
+}
+
+@media (max-width:991px){  /*at 991 pixels window size*/
+
+   header{
+       left:-120%;
+   }
+
+   #menu{        
+       display: block;
+   }
+
+   header.toggle{ /*header ll toggle on left window */
+    left:0%;
+   }
+
+   body{     /*body padding*/
+       padding:0;
+   }
+
+}
+
+@media (max-width:768px){
+
+    html{
+        font-size: 50%;
+    }
+ 
+ }
+
+@media (max-width:400px){ /*phone size dunamic styling */
+
+    header{  
+        width: 100vw;
+    }
+
+    .heading{ 
+        margin:0 3rem;
+    }
+
+    .about .row .counter .box{ /*counter box occupies 100% width in 400pixel screen*/
+        width: 100%;
+    }
+ 
+    .education .box-container .box{ /*lly forr every other section*/
+        width:100%;
+    }
+
+    .portfolio .box-container .box{
+        width:100%;
+    }
+
+    .contact .row form{
+        margin:3rem 0;
+    }
+
+ }
